@@ -1,0 +1,43 @@
+
+ <div class="form-group">
+    <div class="row">
+        <div class="row col-sm-6">
+          Book Form
+        </div>
+    </div>
+    <div class="row">
+        <div class="row col-sm-6">
+          <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <div>
+              <label for="text">id</label>
+              <input type="text" id="name" formControlName="id" />
+            </div>
+            <div>
+              <label for="text">bookname</label>
+              <input type="text" id="email" formControlName="bookname" />
+            </div>
+            <div>
+              <label for="text">author</label>
+              <input type="text" id="email" formControlName="author" />
+            </div>
+            <div>
+              <button type="submit">Submit</button>
+            </div>
+            <div>
+              <button (click)="getBookDetails()">GetDate</button>
+            </div>
+          </form>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="row col-6">
+          <ul>
+            <li *ngFor="let item of showDetails | keyvalue">
+              {{ item.key }}: {{ item.value }}
+            </li>
+          </ul>
+        </div>
+    </div>
+ </div>
+

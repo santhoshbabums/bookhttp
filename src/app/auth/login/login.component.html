@@ -1,0 +1,48 @@
+<!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" formControlName="email">
+      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+        <div *ngIf="email.errors.required">Email is required.</div>
+        <div *ngIf="email.errors.email">Invalid email format.</div>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" formControlName="password">
+      <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error-message">
+        <div *ngIf="password.errors.required">Password is required.</div>
+        <div *ngIf="password.errors.minlength">Password must be at least 6 characters.</div>
+      </div>
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form> -->
+
+  <div>
+    <h1>Login Page</h1>
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" formControlName="email">
+      <div *ngIf="loginForm.get('email').invalid && (loginForm.get('email').dirty || loginForm.get('email').touched)" class="error-message">
+        <div *ngIf="loginForm.get('email').hasError('required')">Email is required.</div>
+        <div *ngIf="loginForm.get('email').hasError('email')">Invalid email format.</div>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" formControlName="password">
+      <div *ngIf="loginForm.get('password').invalid && (loginForm.get('password').dirty || loginForm.get('password').touched)" class="error-message">
+        <div *ngIf="loginForm.get('password').hasError('required')">Password is required.</div>
+        <div *ngIf="loginForm.get('password').hasError('minlength')">Password must be at least 6 characters.</div>
+      </div>
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+  
+  

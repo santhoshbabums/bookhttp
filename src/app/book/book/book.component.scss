@@ -1,0 +1,86 @@
+/* user-form.component.css */
+
+/* Style the form container */
+form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style form fields */
+  div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+  }
+  
+  /* Style the submit button */
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style error messages */
+  .error-message {
+    color: #ff0000;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+
+  /* Apply styles to the entire table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  /* Style table headers */
+  th {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Style even rows with a background color */
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style odd rows with a different background color */
+  tbody tr:nth-child(odd) {
+    background-color: #e0e0e0;
+  }
+  
+  /* Style table cells (td) */
+  td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
